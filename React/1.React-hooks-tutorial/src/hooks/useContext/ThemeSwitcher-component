@@ -1,0 +1,40 @@
+import { useContext } from "react";
+import ThemeContext from "../theme-context";
+
+const ThemeSwitcher = () => {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  return (
+    <button onClick={toggleTheme}>
+      Switch to {isDarkMode ? "Light" : "Dark"} mode
+    </button>
+  );
+};
+
+export default ThemeSwitcher;
+
+import { createContext, useState } from "react";
+
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => setIsDarkMode((prev) => !prev);
+  return (
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export default ThemeContext;
+
+
+// add this in main.jsx
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </StrictMode>,
+);
