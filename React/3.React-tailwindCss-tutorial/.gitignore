@@ -1,0 +1,102 @@
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# Build / Cache Files
+# ==========================
+.cache/
+.parcel-cache/
+.eslintcache
+coverage/
+*.tsbuildinfo
+
+# ==========================
+# React / Vite
+# ==========================
+.vite/
+vite.config.local.*
+
+# ==========================
+# Node Package Files
+# ==========================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+.yarn-integrity
+
+# ==========================
+# Java
+# ==========================
+*.class
+*.jar
+*.war
+*.ear
+
+# ==========================
+# Maven
+# ==========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# ==========================
+# Gradle
+# ==========================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ==========================
+# Spring Boot
+# ==========================
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# ==========================
+# Logs / Runtime
+# ==========================
+*.log
+*.pid
+*.seed
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==========================
+# Database Files (Local)
+# ==========================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================
+# OS Files
+# ==========================
+Thumbs.db
+Desktop.ini
+
+# ==========================
+# Node Package Files
+# ==========================
+**/node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+.yarn-integrity
