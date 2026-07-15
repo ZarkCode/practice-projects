@@ -1,17 +1,15 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 
 const ReactHook = () => {
   const {
     handleSubmit,
     register,
-    watch,
     formState: { errors },
   } = useForm();
   console.log("Errors ", errors);
 
   function formData(data) {
-    console.log("Print");
+    console.log("Print", data);
   }
   return (
     <div>

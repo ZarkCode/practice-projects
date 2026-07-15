@@ -1,4 +1,3 @@
-import React from "react";
 import ReactHook from "./ReactHook";
 
 const App = () => {
