@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import ReactHook from "./ReactHook";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <h2>React Hook Form</h2>
+      <ReactHook />
+    </div>
+  );
+};
 
-export default App
+export default App;
