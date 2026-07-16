@@ -1,24 +1,102 @@
-# Logs
-logs
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# Build / Cache Files
+# ==========================
+.cache/
+.parcel-cache/
+.eslintcache
+coverage/
+*.tsbuildinfo
+
+# ==========================
+# React / Vite
+# ==========================
+.vite/
+vite.config.local.*
+
+# ==========================
+# Node Package Files
+# ==========================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+.yarn-integrity
+
+# ==========================
+# Java
+# ==========================
+*.class
+*.jar
+*.war
+*.ear
+
+# ==========================
+# Maven
+# ==========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# ==========================
+# Gradle
+# ==========================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ==========================
+# Spring Boot
+# ==========================
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# ==========================
+# Logs / Runtime
+# ==========================
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*.pid
+*.seed
 
-node_modules
-dist
-dist-ssr
-*.local
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# ==========================
+# Database Files (Local)
+# ==========================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================
+# OS Files
+# ==========================
+Thumbs.db
+Desktop.ini
+
+# ==========================
+# Node Package Files
+# ==========================
+**/node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+.yarn-integrity
