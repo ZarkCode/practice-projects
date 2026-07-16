@@ -2,10 +2,11 @@ import {
   createColumnHelper,
   flexRender,
   getCoreRowModel,
+  getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 import mockData from "./data/data.json";
-import { Mail, Phone, User } from "lucide-react";
+import { ArrowDown, ArrowUpDown, Mail, Phone, User } from "lucide-react";
 import { useState } from "react";
 
 const columnHelper = createColumnHelper();
@@ -53,10 +54,14 @@ const columns = [
 
 const App = () => {
   const [data, setData] = useState(() => [...mockData]);
+  const [sorting, setSorting] = useState([]);
   const table = useReactTable({
     data,
     columns,
+    state: { sorting },
     getCoreRowModel: getCoreRowModel(),
+    onSortingChange: setSorting,
+    getSortedRowModel: getSortedRowModel(),
   });
   return (
     <div className="flex flex-col min-h-screen max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -68,13 +73,21 @@ const App = () => {
                 {headerGroup.headers.map((header) => (
                   <th
                     key={header.id}
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 upperca4 tracking-wider"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    <div>
+                    <div
+                      {...{
+                        className: header.column.getCanSort()
+                          ? "cursor-pointer select-none flex items-center"
+                          : "",
+                        onClick: header.column.getToggleSortingHandler(),
+                      }}
+                    >
                       {flexRender(
                         header.column.columnDef.header,
                         header.getContext(),
                       )}
+                      <ArrowUpDown className="ml-2" size={14} />
                     </div>
                   </th>
                 ))}
