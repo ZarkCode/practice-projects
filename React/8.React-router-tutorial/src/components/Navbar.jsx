@@ -1,12 +1,27 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn9NFw_v8QrH0TTBoxIa2UlSNV-GVETVyQqkKftPc-jqPiIJR2PV3nA0I&s=10" alt="" />
+    <div className="navbar">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn9NFw_v8QrH0TTBoxIa2UlSNV-GVETVyQqkKftPc-jqPiIJR2PV3nA0I&s=10"
+        width="130px"
+        alt=""
+      />
       <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/products">
+          {" "}
+          <li>Products</li>
+        </Link>
+        <Link to="/about">
+          <li>About</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
       </ul>
       <button>Get Started</button>
     </div>
