@@ -24,7 +24,12 @@ a {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
-  color: #000;
+  /* below should be uncomented while using Link Tag of React Router Dom
+  color: #000; */
+}
+/* added while using NavLink */
+a.active{
+  color: red;
 }
 .navbar button {
   background: #000;
