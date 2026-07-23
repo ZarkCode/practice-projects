@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#f1faff, #cbe4ff);
+}
+
+.sidebar {
+  width: 270px;
+  position: fixed;
+  margin: 16px;
+  border-radius: 16px;
+  background: #151a2d;
+  height: calc(100vh - 32px);
+}
+.sidebar-header {
+  display: flex;
+  padding: 25px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-header .header-logo img {
+  width: 46px;
+  height: 46px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.sidebar-header .toggler{
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: #151a2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+.sidebar-header .toggler:hover{
+    background: #dde4fb;
+}
+
+.sidebar-header .toggler span{
+    font-size: 1.75rem;
+}
+
+.sidebar-nav .nav-list{
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translate(15px);
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  display: flex;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 12px 15px;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.sidebar-nav .nav-link:hover{
+    color: #151a2d;
+    background: #fff;
+}
+
+.sidebar-nav .secondary-nav{
+    position: absolute;
+    bottom: 30px;
+    width: 10%;
+}
